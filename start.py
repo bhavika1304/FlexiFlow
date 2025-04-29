@@ -1,4 +1,7 @@
-from main import app as main_app  # no 'app.' prefix
+from fastapi import FastAPI
+from app.main import app as main_app
+
+app = FastAPI()
 
 # Mount the app from app/start.py
-app = main_app
+app.mount("/", main_app)
