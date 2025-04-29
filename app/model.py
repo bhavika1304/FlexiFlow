@@ -47,7 +47,7 @@ class LinUCB:
 
 # ---------------------- ✅ Persistence Functions ---------------------- #
 
-MODEL_PATH = "saved_models/linucb_model.pkl"
+MODEL_PATH = "linucb_model.pkl"
 
 def save_model(model):
     os.makedirs("model_store", exist_ok=True)
