@@ -1,7 +1,5 @@
-from fastapi import FastAPI
-from app.main import app as main_app
+# start.py
 
-app = FastAPI()
+from main import app  # directly import your app instance
 
-# Mount the app from app/start.py
-app.mount("/", main_app)
+# No new FastAPI instance, no mounting
