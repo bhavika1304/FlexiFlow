@@ -13,6 +13,14 @@ import uuid
 # -------------------------------
 app = FastAPI()
 
+@app.get("/")
+def home():
+    return {"message": "FlexiFlow backend is live and working!"}
+
+@app.get("/health")
+def health_check():
+    return {"status": "ok"}
+
 app.add_middleware(
     CORSMiddleware,
     allow_origins=["*"],
